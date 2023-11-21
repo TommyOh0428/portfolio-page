@@ -25,18 +25,66 @@
         </div>
     </div>
 <!-------------------- About Me ----------------->
-<div class="about">
+<div id="about">
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="photo/selfie-2.jpg">
+                <img src="photo/testing.jpg">
             </div>
             <div class="about-col-2">
-                <h1>About Me</h1>
+                <h1 class="sub-title">About Me</h1>
+                <p> I am currently in my second year at Simon Fraser University, where I'm deeply engaged in studying Software Systems.
+                    As the Design Lead for the SFU Open Source Development Club, I've had the opportunity to contribute to several projects with practical, real-world applications. 
+                    My journey through university has enriched my knowledge in various programming languages, including C++ and JavaScript, alongside a range of libraries.
+                    These experiences have been incredibly meaningful, significantly enhancing my understanding of programming.</p>
+                <br>
+                <p>I am passionately committed to continuous learning and skill development in the ever-evolving field of technology. 
+                    I welcome any opportunity to connect and engage in meaningful conversations about technology and innovation. 
+                    Please feel free to reach out to me; I am always eager to share ideas and learn from others."</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experiences</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing the basic Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web appplication Development using React</li>
+                            <li><span>App Development</span><br>Chrome Extension using HTML, CSS and JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 Nov - present</span><br>Design Lead in SFU OS Development club</li>
+                            <li><span>2023 Jan - present</span><br>Software Developer in SFU OS Development club</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 Sept - present</span><br>Pursue bacheler of science in SFU</li>
+                        </ul>
+                    </div>
             </div>
         </div>
     </div>
 </div>
 
+<script>
+
+    var tablinks = tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
 </body>
 </html>
